@@ -1,3 +1,4 @@
+<img width="1600" height="900" alt="hotel_haven_github_banner_light" src="https://github.com/user-attachments/assets/ca83da7c-f5b3-4c36-8d71-d7b5e10d2be4" />
 
 # Can We Predict Hotel Booking Cancellations Before They Happen?
 Analyzing booking behavior to help hotels reduce revenue loss. So I worked on a predictive analytics project to understand the booking behavior behind cancellations and build a model that can help identify high-risk bookings before they happen
