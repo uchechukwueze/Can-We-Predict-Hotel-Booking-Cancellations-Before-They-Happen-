@@ -56,3 +56,85 @@ Room type analysis shows that **Room Type 6 had the highest cancellation risk at
 <img width="2990" height="1869" alt="C 15" src="https://github.com/user-attachments/assets/7ef117d4-007b-4a5e-91e6-f25597ee5f25" />
 
 Overall, the key insight from the analysis is clear: **Hotel Haven’s cancellation risk is strongly influenced by lead time, market segment, customer type, price range, and booking commitment signals such as special requests**. These findings can help the hotel identify high-risk bookings early and design better retention strategies.
+
+## Model Explanation
+
+## Key Features
+The key variables captured in this were 16 features, including the Lead time, average price, special requests, room type, market segment type, number of nights, date of reservation and the target variable (booking status).
+
+## Tools and Libraries
+
+Python (Jupyter Notebook)
+
+Pandas
+
+Matplotlib
+
+Seaborn
+
+Scikit-Learn
+
+XGBoost
+
+Imbalanced-Learn
+
+## Data Preprocessing
+Following business and data understanding, the data was cleaned during which invalidate date was corrected, data types were fixed and dropped irrelevant dropped. Column engineering was implored to generating the total nights, total revenue, price range, and lead time range. Categorical variables were encoded. RobustScaler was applied to handle skewed numerical features. Class Imbalance (67:33 class distribution) was identified and handled using SMOTE. A final cross validation was done before training.
+
+## Exploratory Data Analysis
+A comprehensive analysis, both univariate and bivariate was done to uncover cancellation patterns.
+
+## Machine Learning Model
+The hotel cancellation predictive model was built using a supervised machine learning approach. The class sets were split into 80:20 for training and testing. Multiple classification algorithms were experimented with, including but not limited to
+
+Logistic Regression
+
+Random Forest Classifier
+
+Gradient Boosting
+
+XGBoost
+
+AdaBoost
+
+Support Vector Machine
+
+K-Nearest Neighbors
+
+Decision Tree The best performing model was selected and underwent hyperparameter tuning to improve its performance
+
+## Evaluation Metrics
+The following metrics were used to assess the performance of the model:
+
+Accuracy: The overall proportion of correctly predicted booking status (both cancelled and not-cancelled)
+Precision: The proportion of correctly identified cancelled bookings among all bookings classified as cancelled (false alarm rate)
+Recall: The proportion of correctly identified cancellations among all actual cancelled bookings (correctly flagged cancellation)
+F1-score: The harmonic mean of precision and recall, providing a balanced metric for model evaluation
+ROC-AUC score: The ability of the model to distinguish between class
+
+## Recommendations
+
+1. **Strengthen booking commitment**
+   Introduce deposits, prepaid rates, or credit card guarantees to reduce casual bookings and encourage customers to commit before arrival.
+
+2. **Create flexible alternatives to full cancellation**
+   For lower-priced rooms, offer options such as rescheduling, partial refunds, or booking credits instead of full cancellation. This gives budget-conscious guests a reason to retain their booking.
+
+3. **Reward direct and offline bookings**
+   Encourage guests who book directly or through offline channels by offering room upgrades, loyalty points, discounts on future stays, or exclusive guest benefits.
+
+4. **Proactively manage long lead-time bookings**
+   Identify bookings made far in advance and engage those guests early through personalized messages, promotional upgrades, reminder campaigns, and curated experience packages.
+
+5. **Offer retention incentives for long-lead bookings**
+   Provide small incentives such as complimentary breakfast, late checkout, room upgrades, or discount vouchers to guests who keep long-lead reservations.
+
+6. **Improve room listing accuracy**
+   Ensure that room descriptions, photos, amenities, and prices accurately reflect the real guest experience. Clear and honest listings can reduce dissatisfaction-driven cancellations.
+
+7. **Grow the corporate customer segment**
+   Actively pursue corporate clients through contract negotiations, corporate rate agreements, and partnerships with companies and travel agencies. Corporate guests showed stronger booking commitment and can provide a more stable revenue stream.
+
+8. **Expand special-request options**
+   Add more detailed special-request fields during booking to increase customer engagement and better capture guest preferences. Customers who make special requests may have stronger booking intention, making this a useful signal for retention planning.
+
